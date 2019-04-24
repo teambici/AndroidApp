@@ -1,4 +1,4 @@
-package co.edu.eci.ieti.ui.network.data;
+package co.edu.eci.ieti.android.network.data;
 
 /**
  * @author Santiago Carrillo

@@ -1,4 +1,4 @@
-package co.edu.eci.ieti.ui.utils;
+package co.edu.eci.ieti.android.ui.utils;
 
 import android.text.TextUtils;
 import android.util.Patterns;

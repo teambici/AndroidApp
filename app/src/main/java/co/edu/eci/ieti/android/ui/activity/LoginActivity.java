@@ -1,4 +1,4 @@
-package co.edu.eci.ieti.ui.activity;
+package co.edu.eci.ieti.android.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,11 +6,11 @@ import android.view.View;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import co.edu.eci.ieti.R;
-import co.edu.eci.ieti.ui.network.RetrofitNetwork;
-import co.edu.eci.ieti.ui.network.data.LoginWrapper;
-import co.edu.eci.ieti.ui.network.data.Token;
-import co.edu.eci.ieti.ui.storage.Storage;
-import co.edu.eci.ieti.ui.utils.StringUtils;
+import co.edu.eci.ieti.android.network.RetrofitNetwork;
+import co.edu.eci.ieti.android.network.data.LoginWrapper;
+import co.edu.eci.ieti.android.network.data.Token;
+import co.edu.eci.ieti.android.storage.Storage;
+import co.edu.eci.ieti.android.ui.utils.StringUtils;
 import com.google.android.material.snackbar.Snackbar;
 import retrofit2.Call;
 import retrofit2.Response;

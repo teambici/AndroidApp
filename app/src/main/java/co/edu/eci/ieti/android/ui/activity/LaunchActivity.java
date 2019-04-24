@@ -1,10 +1,10 @@
-package co.edu.eci.ieti.ui.activity;
+package co.edu.eci.ieti.android.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import co.edu.eci.ieti.ui.storage.Storage;
+import co.edu.eci.ieti.android.storage.Storage;
 
 /**
  * @author Santiago Carrillo

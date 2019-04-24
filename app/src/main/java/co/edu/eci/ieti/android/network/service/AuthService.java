@@ -1,7 +1,7 @@
-package co.edu.eci.ieti.ui.network.service;
+package co.edu.eci.ieti.android.network.service;
 
-import co.edu.eci.ieti.ui.network.data.LoginWrapper;
-import co.edu.eci.ieti.ui.network.data.Token;
+import co.edu.eci.ieti.android.network.data.LoginWrapper;
+import co.edu.eci.ieti.android.network.data.Token;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.POST;

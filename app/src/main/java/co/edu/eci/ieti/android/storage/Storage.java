@@ -1,9 +1,9 @@
-package co.edu.eci.ieti.ui.storage;
+package co.edu.eci.ieti.android.storage;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import co.edu.eci.ieti.R;
-import co.edu.eci.ieti.ui.network.data.Token;
+import co.edu.eci.ieti.android.network.data.Token;
 
 /**
  * @author Santiago Carrillo

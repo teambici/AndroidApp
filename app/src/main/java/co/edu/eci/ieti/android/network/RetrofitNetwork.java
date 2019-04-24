@@ -1,6 +1,6 @@
-package co.edu.eci.ieti.ui.network;
+package co.edu.eci.ieti.android.network;
 
-import co.edu.eci.ieti.ui.network.service.AuthService;
+import co.edu.eci.ieti.android.network.service.AuthService;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
