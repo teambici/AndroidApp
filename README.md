@@ -144,3 +144,5 @@ https://codelabs.developers.google.com/codelabs/android-persistence/
     ```
 8) Make a request to retrieve the Tasks list. Once the data is retrieved then call *updateTasks* method of the of the *TasksAdapter* instance.     
     **Note you should call the *updateTasks* method from the UI thread using the method *runOnUiThread* from the *MainActivity*.
+    
+9) Run the application and verify that the Tasks list is loaded correctly.    
