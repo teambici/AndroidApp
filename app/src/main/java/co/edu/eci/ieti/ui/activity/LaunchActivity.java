@@ -1,4 +1,4 @@
-package co.edu.eci.ieti;
+package co.edu.eci.ieti.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import co.edu.eci.ieti.R;
 
 /**
  * @author Santiago Carrillo

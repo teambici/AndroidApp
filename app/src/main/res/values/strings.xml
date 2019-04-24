@@ -11,4 +11,7 @@
   <string name="login">Login</string>
   <string name="email">email</string>
   <string name="password">password</string>
+  <string name="invalid_email">invalid email</string>
+  <string name="please_enter_a_password">please enter a password</string>
+  <string name="server_error_message">Error connecting to the server. Please try again</string>
 </resources>
