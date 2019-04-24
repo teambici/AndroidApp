@@ -32,7 +32,6 @@ public class LaunchActivity
         {
             startActivity( new Intent( this, LoginActivity.class ) );
         }
-
-
+        finish();
     }
 }
