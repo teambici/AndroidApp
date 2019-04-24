@@ -1,7 +1,7 @@
 package co.edu.eci.ieti.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,7 @@ import co.edu.eci.ieti.R;
 import co.edu.eci.ieti.ui.network.RetrofitNetwork;
 import co.edu.eci.ieti.ui.network.data.LoginWrapper;
 import co.edu.eci.ieti.ui.network.data.Token;
+import co.edu.eci.ieti.ui.storage.Storage;
 import co.edu.eci.ieti.ui.utils.StringUtils;
 import com.google.android.material.snackbar.Snackbar;
 import retrofit2.Call;
@@ -26,6 +27,8 @@ public class LoginActivity
 
     private final RetrofitNetwork retrofitNetwork = new RetrofitNetwork();
 
+    private Storage storage;
+
     private EditText email;
 
     private EditText password;
@@ -35,16 +38,18 @@ public class LoginActivity
     {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_login );
+        storage = new Storage( this );
         email = findViewById( R.id.email );
         password = findViewById( R.id.password );
     }
 
 
-    public void onLoginClicked( View view )
+    public void onLoginClicked( final View view )
     {
         final LoginWrapper loginWrapper = validInputFields();
         if ( loginWrapper != null )
         {
+            view.setEnabled( false );
             executorService.execute( new Runnable()
             {
                 @Override
@@ -57,27 +62,38 @@ public class LoginActivity
                         if ( response.isSuccessful() )
                         {
                             Token token = response.body();
-                            Log.d( "Developer", "token:  " + token.getAccessToken() );
+                            storage.saveToken( token );
+                            startActivity( new Intent( LoginActivity.this, MainActivity.class ) );
+                            finish();
                         }
                         else
                         {
-                            showErrorMessage();
+                            showErrorMessage( view );
                         }
 
                     }
                     catch ( IOException e )
                     {
                         e.printStackTrace();
-                        showErrorMessage();
+                        showErrorMessage( view );
                     }
                 }
             } );
         }
     }
 
-    private void showErrorMessage()
+    private void showErrorMessage( final View view )
     {
-        Snackbar.make( password, getString( R.string.server_error_message ), Snackbar.LENGTH_LONG );
+        runOnUiThread( new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                view.setEnabled( true );
+                Snackbar.make( view, getString( R.string.server_error_message ), Snackbar.LENGTH_LONG );
+            }
+        } );
+
     }
 
     private LoginWrapper validInputFields()

@@ -1,5 +1,6 @@
 package co.edu.eci.ieti.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import co.edu.eci.ieti.R;
+import co.edu.eci.ieti.ui.storage.Storage;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -19,11 +21,14 @@ public class MainActivity
     implements NavigationView.OnNavigationItemSelectedListener
 {
 
+    private Storage storage;
+
     @Override
     protected void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
+        storage = new Storage( this );
         Toolbar toolbar = findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
 
@@ -95,29 +100,11 @@ public class MainActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if ( id == R.id.nav_camera )
+        if ( id == R.id.nav_logout )
         {
-            // Handle the camera action
-        }
-        else if ( id == R.id.nav_gallery )
-        {
-
-        }
-        else if ( id == R.id.nav_slideshow )
-        {
-
-        }
-        else if ( id == R.id.nav_manage )
-        {
-
-        }
-        else if ( id == R.id.nav_share )
-        {
-
-        }
-        else if ( id == R.id.nav_send )
-        {
-
+            storage.clear();
+            startActivity( new Intent( this, LoginActivity.class ) );
+            finish();
         }
 
         DrawerLayout drawer = findViewById( R.id.drawer_layout );
