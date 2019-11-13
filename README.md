@@ -151,7 +151,7 @@ https://developer.android.com/topic/libraries/architecture/viewmodel
 
 **Bonus**
 
-11) Use a LiveData to connect your UI with the ViewModel:
+12) Use a LiveData to connect your UI with the ViewModel:
 https://developer.android.com/topic/libraries/architecture/livedata
 
 
