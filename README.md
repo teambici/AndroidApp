@@ -144,4 +144,13 @@ https://codelabs.developers.google.com/codelabs/android-room-with-a-view/index.h
 8) Make a request to retrieve the Tasks list. Once the data is retrieved then call *updateTasks* method of the of the *TasksAdapter* instance.     
     **Note you should call the *updateTasks* method from the UI thread using the method *runOnUiThread* from the *MainActivity*.
     
-9) Run the application and verify that the Tasks list is loaded correctly.    
+9) Modify your MainActivity so all the business logic to make the network request happens in a TasksViewModel:
+https://developer.android.com/topic/libraries/architecture/viewmodel
+
+10) Run the application and verify that the Tasks list is loaded correctly.    
+
+**Bonus**
+11) Use a LiveData to connect your UI with the ViewModel:
+https://developer.android.com/topic/libraries/architecture/livedata
+
+
