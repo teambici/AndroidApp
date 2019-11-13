@@ -43,7 +43,7 @@
 #### Part 2: Configure Local Storage using Room Library
 
 1) Do the android-persistence codelab until Step 2 - Define Entity Relationships:
-https://codelabs.developers.google.com/codelabs/android-persistence/
+https://codelabs.developers.google.com/codelabs/android-room-with-a-view/index.html?index=..%2F..index#0
 
 2) Create the structure on your project to have a local database to save the *Task* and *User* models.
 
