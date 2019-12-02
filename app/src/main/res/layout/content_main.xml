@@ -8,4 +8,9 @@
                                                    tools:context=".android.ui.activity.MainActivity"
                                                    tools:showIn="@layout/app_bar_main">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

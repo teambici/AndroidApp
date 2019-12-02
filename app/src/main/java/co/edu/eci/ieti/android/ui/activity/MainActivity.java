@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
+
 import co.edu.eci.ieti.R;
 import co.edu.eci.ieti.android.storage.Storage;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -22,6 +24,7 @@ public class MainActivity
 {
 
     private Storage storage;
+    RecyclerView RecyclerView= findViewById(R.id.recyclerView);
 
     @Override
     protected void onCreate( Bundle savedInstanceState )

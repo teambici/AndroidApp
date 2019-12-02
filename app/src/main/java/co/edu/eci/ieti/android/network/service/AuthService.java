@@ -13,7 +13,7 @@ import retrofit2.http.POST;
 public interface AuthService
 {
 
-    @POST( "auth" )
+    @POST( "/auth" )
     Call<Token> login( @Body LoginWrapper loginWrapper );
 
 }
