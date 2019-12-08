@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+
+import co.edu.eci.ieti.MapsActivity;
 import co.edu.eci.ieti.R;
 import co.edu.eci.ieti.android.network.RetrofitNetwork;
 import co.edu.eci.ieti.android.network.data.Usuario;
@@ -55,6 +57,7 @@ public class LoginActivity
                 @Override
                 public void run()
                 {
+
                     try
                     {
                         Call<Token> call = retrofitNetwork.getAuthService().login(usuario);
@@ -63,7 +66,7 @@ public class LoginActivity
                         {
                             Token token = response.body();
                             storage.saveToken( token );
-                            startActivity( new Intent( LoginActivity.this, MainActivity.class ) );
+                            startActivity( new Intent( LoginActivity.this, MapsActivity.class ) );
                             finish();
                         }
                         else
