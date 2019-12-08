@@ -23,7 +23,7 @@ public class RetrofitNetwork
 
     public RetrofitNetwork()
     {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl( "http:/10.0.2.2:8080/" ) //localhost for emulator
+        Retrofit retrofit = new Retrofit.Builder().baseUrl( "http://easybiciback.herokuapp.com" ) //localhost for emulator
             .addConverterFactory( GsonConverterFactory.create() ).build();
 
         authService = retrofit.create( AuthService.class );
@@ -48,7 +48,7 @@ public class RetrofitNetwork
             }
         } );
         Retrofit retrofit =
-                new Retrofit.Builder().baseUrl( "http:/10.0.2.2:8080/" ).addConverterFactory( GsonConverterFactory.create() ).client(
+                new Retrofit.Builder().baseUrl( "http://easybiciback.herokuapp.com" ).addConverterFactory( GsonConverterFactory.create() ).client(
                         httpClient.build() ).build();
     }
 

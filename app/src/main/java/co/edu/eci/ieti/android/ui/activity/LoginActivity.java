@@ -7,7 +7,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import co.edu.eci.ieti.R;
 import co.edu.eci.ieti.android.network.RetrofitNetwork;
-import co.edu.eci.ieti.android.network.data.LoginWrapper;
+import co.edu.eci.ieti.android.network.data.Usuario;
 import co.edu.eci.ieti.android.network.data.Token;
 import co.edu.eci.ieti.android.storage.Storage;
 import co.edu.eci.ieti.android.ui.utils.StringUtils;
@@ -46,8 +46,8 @@ public class LoginActivity
 
     public void onLoginClicked( final View view )
     {
-        final LoginWrapper loginWrapper = validInputFields();
-        if ( loginWrapper != null )
+        final Usuario usuario = validInputFields();
+        if ( usuario != null )
         {
             view.setEnabled( false );
             executorService.execute( new Runnable()
@@ -57,7 +57,7 @@ public class LoginActivity
                 {
                     try
                     {
-                        Call<Token> call = retrofitNetwork.getAuthService().login( loginWrapper );
+                        Call<Token> call = retrofitNetwork.getAuthService().login(usuario);
                         Response<Token> response = call.execute();
                         if ( response.isSuccessful() )
                         {
@@ -96,7 +96,7 @@ public class LoginActivity
 
     }
 
-    private LoginWrapper validInputFields()
+    private Usuario validInputFields()
     {
         String email = this.email.getText().toString();
         String password = this.password.getText().toString();
@@ -119,6 +119,6 @@ public class LoginActivity
             }
         }
 
-        return new LoginWrapper( email, password );
+        return new Usuario( email, password );
     }
 }
