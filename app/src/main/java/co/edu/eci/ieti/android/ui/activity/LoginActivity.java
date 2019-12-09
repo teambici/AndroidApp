@@ -66,6 +66,7 @@ public class LoginActivity
                         {
                             Token token = response.body();
                             storage.saveToken( token );
+
                             startActivity( new Intent( LoginActivity.this, MapsActivity.class ) );
                             finish();
                         }

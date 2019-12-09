@@ -18,4 +18,31 @@
     <string name="options">Options</string>
     <string name="slogan">Viaja feliz en bici</string>
     <string name="title_activity_maps">Map</string>
+    <string name="no_location_data_provided">no_location_data_provided</string>
+    <string name="no_address_found">no_location_data_provided</string>
+    <string name="address_found">address_found</string>
+    <string name="service_not_available">service_not_available</string>
+    <string name="invalid_lat_long_used">invalid_lat_long_used</string>
+    <string name="BotonDIreccion">localizar</string>
+    <string name="ubicacion_actual">ubicacion</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="Nombre_usuario">Daniel Ramirez</string>
+    <string name="Correo">daniel.ramirez2@hotmail.com</string>
+    <string name="identificacion">98173540234</string>
+    <string name="Estrellas">5</string>
 </resources>

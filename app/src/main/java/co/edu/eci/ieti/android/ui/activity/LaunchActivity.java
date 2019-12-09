@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import co.edu.eci.ieti.MapsActivity;
 import co.edu.eci.ieti.android.storage.Storage;
 
 /**
@@ -22,7 +24,7 @@ public class LaunchActivity
         Storage storage = new Storage( this );
         if ( storage.containsToken() )
         {
-            startActivity( new Intent( this, MainActivity.class ) );
+            startActivity( new Intent( this, MapsActivity.class ) );
         }
         else
         {
